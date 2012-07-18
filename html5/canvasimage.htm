@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+window.onload=function()
+{
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=new Image();
+img.src="canvas_imgflowers.png";
+ctx.drawImage(img,0,0);
+}
+</script>
+
+</body>
+</html>

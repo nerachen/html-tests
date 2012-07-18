@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Tryit Editor v1.5</title>
+<link rel="stylesheet" type="text/css" href="tryit.asp_files/tryit.css">
+<script type="text/javascript">
+function displayad()
+{
+var t=document.getElementById("pre_code").value;
+t=t.replace(/=/gi,"w3equalsign")
+t=t.replace(/script/gi,"w3scripttag")
+	
+document.getElementById("code").value=t;
+//document.getElementById("adframe").src="/tryitbanner.asp?secid=tryhtml&rnd=" + Math.random();
+document.getElementById("tryitform").action="tryit_view.asp?x=" + Math.random();
+}
+</script>
+</head>
+
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td align="center">
+<iframe id="adframe" style="background-color: rgb(255, 255, 255);" marginwidth="0" marginheight="0" src="tryit.asp_files/tryitbanner.htm" frameborder="0" height="98" scrolling="no" width="960"></iframe>
+</td>
+</tr>
+</tbody></table>
+
+<table class="maintable" border="0" cellpadding="3px" cellspacing="3px">
+<tbody><tr>
+<td width="50%">
+
+<form style="margin:0px" action="tryit_view.asp" method="post" target="view" id="tryitform">
+<input style="margin-bottom: 5px; font-family: verdana;" name="submit" value="Edit and Click Me &gt;&gt;" onclick="displayad()" type="submit">
+<textarea class="code_input" width="100%" height="400px" id="pre_code" wrap="logical">&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Playing the Object&lt;/h2&gt;
+
+&lt;embed src="intro.swf" width="200px" height="200px"&gt;&lt;/embed&gt;
+
+&lt;p&gt;If you cannot see this, your computer doesn't support the format&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</textarea>
+<input name="code" id="code" type="hidden">
+<input id="bt" name="bt" type="hidden">
+</form>
+
+</td>
+<td valign="top">
+<p class="result_header">Your Result:</p>
+<iframe class="result_output" name="view" src="tryit.asp_files/tryit_view.htm" frameborder="0" height="400px" width="100%"></iframe>
+</td>
+</tr>
+<tr>
+<td class="bottomtext" align="left">
+Edit the code above and click to see the result.
+</td>
+<td class="bottomtext" align="right">
+<a style="color: rgb(97, 127, 16);" href="http://www.w3schools.com/">W3Schools.com</a> - Try it yourself&nbsp;
+</td>
+</tr>
+</tbody></table>
+
+
+</body></html>

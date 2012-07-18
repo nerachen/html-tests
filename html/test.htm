@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Tryit Editor v1.5</title>
+<link rel="stylesheet" type="text/css" href="/tryit.css" />
+<script type="text/javascript">
+function displayad()
+{
+var t=document.getElementById("pre_code").value;
+//t=t.replace(/=/gi,"w3equalsign")
+//t=t.replace(/script/gi,"w3scripttag")
+	
+document.getElementById("code").value=t;
+//document.getElementById("adframe").src="/tryitbanner.asp?secid=tryhtml&rnd=" + Math.random();
+//document.getElementById("tryitform").action="tryit_view.asp?x=" + Math.random();
+}
+</script>
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<iframe id="adframe" style="background-color:#ffffff" height="98" width="960" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" 
+src="/tryitbanner.asp?secid=tryhtml&rnd=0.5350611"></iframe>
+
+</td>
+</tr>
+</table>
+
+<table border="0" class="maintable" cellpadding="3px" cellspacing="3px">
+<tr>
+<td width="50%">
+
+<form style="margin:0px" action="tryit_view.asp" method="post" target="view" id="tryitform">
+<input style="margin-bottom:5px;font-family:verdana;" name="submit" type="submit" value="Edit and Click Me >>" onclick="displayad()">
+<textarea class="code_input" width="100%" height="400px" id="pre_code" wrap="logical">
+<html>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+</body>
+</html>
+
+</textarea>
+<input type="hidden" name="code" id="code" />
+<input type="hidden" id="bt" name="bt" />
+</form>
+
+</td>
+
+<td valign="top">
+<p class="result_header">Your Result:</p>
+<iframe class="result_output" width="100%" height="400px" frameborder="0" name="view" src="tryit_view.asp?filename=tryhtml_headers"></iframe>
+</td>
+</tr>
+<tr>
+<td align="left" class="bottomtext">
+Edit the code above and click to see the result.
+</td>
+<td align="right" class="bottomtext">
+<a style="color:#617f10" href="http://www.w3schools.com">W3Schools.com</a> - Try it yourself&nbsp;
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>
